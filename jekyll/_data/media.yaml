@@ -1,0 +1,27 @@
+favicon: favicon.jpg
+thumb: thumb.jpg
+home:
+  - slide1.jpg
+  - slide2.jpg
+couple:
+  groom: chure.jpg
+  bride: codau.jpg
+album:
+  - hinhcuoi1.jpg
+  - hinhcuoi2.jpg
+  - hinhcuoi3.jpg
+  - hinhcuoi4.jpg
+  - hinhcuoi5.jpg
+  - hinhcuoi6.jpg
+  - hinhcuoi7.jpg
+  - hinhcuoi8.jpg
+  - hinhcuoi9.jpg
+  - hinhcuoi10.jpg
+  - hinhcuoi11.jpg
+  - hinhcuoi12.jpg
+  - hinhcuoi13.jpg
+  - hinhcuoi14.jpg
+  - hinhcuoi15.jpg
+  - hinhcuoi16.jpg
+  
+footer: thankyou.jpg

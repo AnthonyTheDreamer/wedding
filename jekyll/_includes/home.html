@@ -16,12 +16,11 @@
             </div>
         </div>
         <div class="swiper-wrapper">
+            {% for image in site.data.media.home %}
             <div class="swiper-slide">
-                <div class="slide-inner slide-bg-image" data-background="img/slide1.jpg"></div>
+                <div class="slide-inner slide-bg-image" data-background="{{ image | prepend: site.image_path }}"></div>
             </div>
-            <div class="swiper-slide">
-                <div class="slide-inner slide-bg-image" data-background="img/slide2.jpg"></div>
-            </div>
+            {% endfor %}
         </div>
         <div class="swiper-pagination"></div>
         <div class="swiper-button-next"></div>

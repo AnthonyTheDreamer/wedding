@@ -12,86 +12,13 @@
         <div class="row">
             <div class="col col-xs-12">
                 <div class="gallery-container gallery-fancybox masonry-gallery">
+                    {% for image in site.data.media.album %}
                     <div class="grid grid-item">
-                        <a href="img/hinhcuoi1.jpg" class="fancybox" data-fancybox-group="gall-1">
-                            <img src="img/hinhcuoi1.jpg" alt="" class="img img-responsive">
+                        <a href="{{ image | prepend: site.image_path }}" class="fancybox" data-fancybox-group="gall-1">
+                            <img src="{{ image | prepend: site.image_path }}" alt="" class="img img-responsive">
                         </a>
-                    </div>
-                    <div class="grid grid-item">
-                        <a href="img/hinhcuoi2.jpg" class="fancybox" data-fancybox-group="gall-1">
-                            <img src="img/hinhcuoi2.jpg" alt="" class="img img-responsive">
-                        </a>
-                    </div>
-                    <div class="grid grid-item">
-                        <a href="img/hinhcuoi3.jpg" class="fancybox" data-fancybox-group="gall-1">
-                            <img src="img/hinhcuoi3.jpg" alt="" class="img img-responsive">
-                        </a>
-                    </div>
-                    <div class="grid grid-item">
-                        <a href="img/hinhcuoi4.jpg" class="fancybox" data-fancybox-group="gall-1">
-                            <img src="img/hinhcuoi4.jpg" alt="" class="img img-responsive">
-                        </a>
-                    </div>
-                    <div class="grid grid-item">
-                        <a href="img/hinhcuoi5.jpg" class="fancybox" data-fancybox-group="gall-1">
-                            <img src="img/hinhcuoi5.jpg" alt="" class="img img-responsive">
-                        </a>
-                    </div>
-                    <div class="grid grid-item">
-                        <a href="img/hinhcuoi6.jpg" class="fancybox" data-fancybox-group="gall-1">
-                            <img src="img/hinhcuoi6.jpg" alt="" class="img img-responsive">
-                        </a>
-                    </div>
-                    <div class="grid grid-item">
-                        <a href="img/hinhcuoi7.jpg" class="fancybox" data-fancybox-group="gall-1">
-                            <img src="img/hinhcuoi7.jpg" alt="" class="img img-responsive">
-                        </a>
-                    </div>
-                    <div class="grid grid-item">
-                        <a href="img/hinhcuoi8.jpg" class="fancybox" data-fancybox-group="gall-1">
-                            <img src="img/hinhcuoi8.jpg" alt="" class="img img-responsive">
-                        </a>
-                    </div>
-                    <div class="grid grid-item">
-                        <a href="img/hinhcuoi9.jpg" class="fancybox" data-fancybox-group="gall-1">
-                            <img src="img/hinhcuoi9.jpg" alt="" class="img img-responsive">
-                        </a>
-                    </div>
-                    <div class="grid grid-item">
-                        <a href="img/hinhcuoi10.jpg" class="fancybox" data-fancybox-group="gall-1">
-                            <img src="img/hinhcuoi10.jpg" alt="" class="img img-responsive">
-                        </a>
-                    </div>
-                    <div class="grid grid-item">
-                        <a href="img/hinhcuoi11.jpg" class="fancybox" data-fancybox-group="gall-1">
-                            <img src="img/hinhcuoi11.jpg" alt="" class="img img-responsive">
-                        </a>
-                    </div>
-                    <div class="grid grid-item">
-                        <a href="img/hinhcuoi12.jpg" class="fancybox" data-fancybox-group="gall-1">
-                            <img src="img/hinhcuoi12.jpg" alt="" class="img img-responsive">
-                        </a>
-                    </div>
-                    <div class="grid grid-item">
-                        <a href="img/hinhcuoi13.jpg" class="fancybox" data-fancybox-group="gall-1">
-                            <img src="img/hinhcuoi13.jpg" alt="" class="img img-responsive">
-                        </a>
-                    </div>
-                    <div class="grid grid-item">
-                        <a href="img/hinhcuoi14.jpg" class="fancybox" data-fancybox-group="gall-1">
-                            <img src="img/hinhcuoi14.jpg" alt="" class="img img-responsive">
-                        </a>
-                    </div>
-                    <div class="grid grid-item">
-                        <a href="img/hinhcuoi15.jpg" class="fancybox" data-fancybox-group="gall-1">
-                            <img src="img/hinhcuoi15.jpg" alt="" class="img img-responsive">
-                        </a>
-                    </div>
-                    <div class="grid grid-item">
-                        <a href="img/hinhcuoi16.jpg" class="fancybox" data-fancybox-group="gall-1">
-                            <img src="img/hinhcuoi16.jpg" alt="" class="img img-responsive">
-                        </a>
-                    </div>
+                    </div> 
+                    {% endfor %}
                 </div>
             </div>
         </div>
