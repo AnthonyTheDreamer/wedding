@@ -13,26 +13,20 @@
                     <div class="wedding-box-modal-content">
                         <div class="wedding-box-modal-body">
                             <div class="wedding-box">
+                                {% for box in site.data.main.wedding-box %}
                                 <div class="wedding-box-card">
-                                    <h3>Mừng cưới đến chú rể</h3>
-                                    <img class="qr-code-image" src="img/qrcodau.png">
-                                    <p>Ngân hàng: <strong>VIETCOMBANK</strong>
+                                    <h3>{{ box.title }}</h3>
+                                    <img class="qr-code-image"
+                                        src="{{ site.data.media.wedding-box[forloop.index0] | prepend: site.image_path }}"
+                                        alt="site.data.media.wedding-box[forloop.index0]">
+                                    <p>Ngân hàng: <strong>{{ box.bank }}</strong>
                                     </p>
-                                    <p>Tên tài khoản: <strong>NGUYEN CONG ANH</strong>
+                                    <p>Tên tài khoản: <strong>{{ box.name }}</strong>
                                     </p>
-                                    <p>Số tài khoản: <strong>0991000020245</strong>
+                                    <p>Số tài khoản: <strong>{{ box.number }}</strong>
                                     </p>
                                 </div>
-                                <div class="wedding-box-card">
-                                    <h3>Mừng cưới đến cô dâu</h3>
-                                    <img class="qr-code-image" src="img/qrcodau.png">
-                                    <p>Ngân hàng: <strong>VIETCOMBANK</strong>
-                                    </p>
-                                    <p>Tên tài khoản: <strong>PHAM THUY LINH</strong>
-                                    </p>
-                                    <p>Số tài khoản: <strong>0211000472384</strong>
-                                    </p>
-                                </div>
+                                {% endfor %}
                             </div>
                         </div>
                     </div>

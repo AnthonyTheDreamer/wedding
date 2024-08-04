@@ -23,8 +23,13 @@ album:
   - hinhcuoi14.jpg
   - hinhcuoi15.jpg
   - hinhcuoi16.jpg
+  - hinhcuoi17.jpg
+  - hinhcuoi18.jpg
 events:
   - nhagai.jpg
   - nhatrai.jpg
-  
+events_background: hinhnen1.jpg
+wedding-box:
+  - qrcodau.jpg
+  - qrchure.jpg
 footer: thankyou.jpg
