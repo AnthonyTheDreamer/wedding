@@ -7797,7 +7797,7 @@ img {
   color: #fff;
 }
 
-.donate-modal {
+.wedding-box-modal {
     display: none; 
     position: fixed;
     z-index: 999999;
@@ -7811,56 +7811,56 @@ img {
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.5);
 }
-.donate-modal-content {
+.wedding-box-modal-content {
     position: relative;
     margin: auto;
     padding: 0;
     width: 90%;
 	max-width: 850px;
-    -webkit-animation-name: animatetopfordonatemodal;
+    -webkit-animation-name: animatetopforwedding-boxmodal;
     -webkit-animation-duration: 0.4s;
-    animation-name: animatetopfordonatemodal;
+    animation-name: animatetopforwedding-boxmodal;
     animation-duration: 0.4s
 }
-@-webkit-keyframes animatetopfordonatemodal {
+@-webkit-keyframes animatetopforwedding-boxmodal {
     from {top:-300px; opacity:0} 
     to {top:0; opacity:1}
 }
-@keyframes animatetopfordonatemodal {
+@keyframes animatetopforwedding-boxmodal {
     from {top:-300px; opacity:0}
     to {top:0; opacity:1}
 }
-.donate-modal strong, .donate-modal h3{font-family:inherit!important;}
-.donate-modal-close {color: white;float: right;font-size: 28px;font-weight: bold;text-decoration: none;cursor: pointer;}
-.donate-modal-header {padding: 8px 16px;background-color: #f23b43;color: #fff;font-size:30px;text-align:center;line-height: 40px;}
-.donate-modal-header strong{display:flex;align-items:center;justify-content: center;flex-wrap: wrap;color:#fff;}
+.wedding-box-modal strong, .wedding-box-modal h3{font-family:inherit!important;}
+.wedding-box-modal-close {color: white;float: right;font-size: 28px;font-weight: bold;text-decoration: none;cursor: pointer;}
+.wedding-box-modal-header {padding: 8px 16px;background-color: #f23b43;color: #fff;font-size:30px;text-align:center;line-height: 40px;}
+.wedding-box-modal-header strong{display:flex;align-items:center;justify-content: center;flex-wrap: wrap;color:#fff;}
 
-.donate-modal-header strong span{margin-left:10px;}
-.donate-modal-body {padding: 0 15px;}
-.donate-box{display: flex;justify-content: space-evenly;flex-wrap: wrap;}
-.donate-box .donate-card{width: calc(50% - 40px);margin: 10px;padding: 20px;border: 3px solid #c89d9c;border-radius: 10px;text-align: center;background-color:#fff;margin-top:0;}
-.donate-box .donate-card:hover{box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);}
-.donate-box .donate-card h3{padding:0;margin:0;margin-bottom: 20px;font-weight: bold;font-size: 18px;line-height: 30px;}
-.donate-box .donate-card p {margin: 10px 0!important;font-size: 16px;}
-.donate-box .donate-card p:last-child {margin-bottom:0!important;}
+.wedding-box-modal-header strong span{margin-left:10px;}
+.wedding-box-modal-body {padding: 0 15px;}
+.wedding-box{display: flex;justify-content: space-evenly;flex-wrap: wrap;}
+.wedding-box .wedding-box-card{width: calc(50% - 40px);margin: 10px;padding: 20px;border: 3px solid #c89d9c;border-radius: 10px;text-align: center;background-color:#fff;margin-top:0;}
+.wedding-box .wedding-box-card:hover{box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);}
+.wedding-box .wedding-box-card h3{padding:0;margin:0;margin-bottom: 20px;font-weight: bold;font-size: 18px;line-height: 30px;}
+.wedding-box .wedding-box-card p {margin: 10px 0!important;font-size: 16px;}
+.wedding-box .wedding-box-card p:last-child {margin-bottom:0!important;}
 @media (max-width: 699px) {
-  .donate-box .donate-card{width:100%;margin: 20px 5px;}
+  .wedding-box .wedding-box-card{width:100%;margin: 20px 5px;}
 }
-.donate-box .donate-card {position:relative;}
-.donate-box .donate-card .qr-code-image{max-width: 150px;border: 1px solid #ccc;padding: 3px;margin: auto;display: block;}
-.donate-box .cryptos-box {border-top: 1px solid #f23b43;margin-top: 25px;}
-.donate-box .cryptos-box h4 {margin: 0;margin-top: 20px;text-align: center;}
-.donate-box .cryptos-box .cryptos-items {display: flex;flex-wrap: wrap;justify-content: center;margin-right: -10px;margin-left: -10px;margin-top: 10px;}
-.donate-box .cryptos-box .cryptos-items .crypto-item {padding:10px 10px 0;}
-.donate-box .cryptos-box .cryptos-items .crypto-item img {width:50px;max-width:100%;min-width:35px;cursor:pointer;}
-.donate-box .cryptos-box-view {display:none;position: absolute;top: 0;left: 0;background: #ffffff;width: 100%;height: 100%;border-radius: 7px;padding:10px;text-align: center;}
-.donate-box .cryptos-box-view h5 {font-weight: bold;font-size: 18px;display: flex;align-items: center;justify-content: center;margin-bottom: 15px;}
-.donate-box .cryptos-box-view h5 img{width:25px;}
-.donate-box .cryptos-box-view h5 .coin-img {margin-right: 5px;}
-.donate-box .cryptos-box-view h5 .coin-id {margin-left: 5px;}
-.donate-box .cryptos-box-view .coin-address {display: block;padding: 10px;background: #ffe2e4;margin-bottom: 15px;word-break: break-word;color: #201f1f;}
-.donate-box .cryptos-box-view .cryptos-box-view-close {margin-top: 15px;background: #f23b43;color: #fff;padding: 5px 15px;border-radius: 5px;border: 1px solid #e3252d;}
-.donate-box .cryptos-box-view .cryptos-box-view-close:hover{background: #e3252d;}
+.wedding-box .wedding-box-card {position:relative;}
+.wedding-box .wedding-box-card .qr-code-image{max-width: 150px;border: 1px solid #ccc;padding: 3px;margin: auto;display: block;}
+.wedding-box .cryptos-box {border-top: 1px solid #f23b43;margin-top: 25px;}
+.wedding-box .cryptos-box h4 {margin: 0;margin-top: 20px;text-align: center;}
+.wedding-box .cryptos-box .cryptos-items {display: flex;flex-wrap: wrap;justify-content: center;margin-right: -10px;margin-left: -10px;margin-top: 10px;}
+.wedding-box .cryptos-box .cryptos-items .crypto-item {padding:10px 10px 0;}
+.wedding-box .cryptos-box .cryptos-items .crypto-item img {width:50px;max-width:100%;min-width:35px;cursor:pointer;}
+.wedding-box .cryptos-box-view {display:none;position: absolute;top: 0;left: 0;background: #ffffff;width: 100%;height: 100%;border-radius: 7px;padding:10px;text-align: center;}
+.wedding-box .cryptos-box-view h5 {font-weight: bold;font-size: 18px;display: flex;align-items: center;justify-content: center;margin-bottom: 15px;}
+.wedding-box .cryptos-box-view h5 img{width:25px;}
+.wedding-box .cryptos-box-view h5 .coin-img {margin-right: 5px;}
+.wedding-box .cryptos-box-view h5 .coin-id {margin-left: 5px;}
+.wedding-box .cryptos-box-view .coin-address {display: block;padding: 10px;background: #ffe2e4;margin-bottom: 15px;word-break: break-word;color: #201f1f;}
+.wedding-box .cryptos-box-view .cryptos-box-view-close {margin-top: 15px;background: #f23b43;color: #fff;padding: 5px 15px;border-radius: 5px;border: 1px solid #e3252d;}
+.wedding-box .cryptos-box-view .cryptos-box-view-close:hover{background: #e3252d;}
 
 
 .video-section .top-area {
