@@ -6,3 +6,14 @@ bride:
   letter: TL
 date: 15/09/2024
 date_full: 15 Tháng 09 2024
+events:
+  - name: Tiệc cưới nhà gái
+    date: 11:00 08/09/2024
+    location: Trung Tâm Tổ Chức Sự Kiện Và Tiệc Cưới Ruby Palace
+    address: Tổ 37, Đường Ngô Quyền, Kỳ Bá, Thành Phố Thái Bình, Thái Bình
+    link: https://maps.app.goo.gl/aK6ZFQydmE8R1TRP6
+  - name: Tiệc cưới nhà trai
+    date: 11:00 15/09/2024
+    location: Nhà Khách Bộ Quốc Phòng
+    address: 266 Đường Thụy Khuê, Thuỵ Khuê, Ba Đình, Hà Nội
+    link: https://maps.app.goo.gl/y5oH65dyb3dKfSyy8

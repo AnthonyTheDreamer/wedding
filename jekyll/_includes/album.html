@@ -15,7 +15,7 @@
                     {% for image in site.data.media.album %}
                     <div class="grid grid-item">
                         <a href="{{ image | prepend: site.image_path }}" class="fancybox" data-fancybox-group="gall-1">
-                            <img src="{{ image | prepend: site.image_path }}" alt="" class="img img-responsive">
+                            <img src="{{ image | prepend: site.image_path }}" alt="{{ image }}" class="img img-responsive">
                         </a>
                     </div> 
                     {% endfor %}

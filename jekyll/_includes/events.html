@@ -7,30 +7,22 @@
         <div class="row">
             <div class="col col-xs-12">
                 <div class="event-grids clearfix">
+                    {% for event in site.data.main.events %}
                     <div class="grid section-bg-img">
-                        <h3>Tiệc Cưới Nhà Gái</h3>
+                        <h3>{{ event.name }}</h3>
                         <div class="image-wrap">
-                            <img src="img/nhagai.jpg" alt="">
+                            <img src="{{ site.data.media.events[forloop.index0] | prepend: site.image_path }}" alt="">
                         </div>
                         <p>
-                            <strong>11:00 08/09/2024</strong>
+                            <strong>{{ event.date }}</strong>
                         </p>
-                        <p>TP Thái Bình, Thái Bình</p>
-                        <a class="see-location-btn" href="https://maps.app.goo.gl/kSqRvD6mGSwqs5Bt6" target="_blank">Xem
+                        <p>{{ event.address }}</p>
+                        {% if event.link %}
+                        <a class="see-location-btn" href="{{ event.link }}" target="_blank">Xem
                             bản đồ</a>
+                        {% endif %}
                     </div>
-                    <div class="grid section-bg-img">
-                        <h3>Tiệc Cưới Nhà Trai</h3>
-                        <div class="image-wrap">
-                            <img src="img/nhatrai.jpg" alt="">
-                        </div>
-                        <p>
-                            <strong>11:00 15/09/2024</strong>
-                        </p>
-                        <p>266 Thụy Khuê, Thụy Khuê, Ba Đình, Hà Nội</p>
-                        <a class="see-location-btn" href="https://maps.app.goo.gl/y5oH65dyb3dKfSyy8" target="_blank">Xem
-                            bản đồ</a>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
