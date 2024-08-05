@@ -18,6 +18,11 @@
                         <p>
                             <strong>{{ event.date }}</strong>
                         </p>
+                        {% if event.location %}
+                        <p>
+                            <i>{{ event.location }}</i>
+                        </p>
+                        {% endif %}
                         <p>{{ event.address }}</p>
                         {% if event.link %}
                         <a class="see-location-btn" href="{{ event.link }}" target="_blank">Xem

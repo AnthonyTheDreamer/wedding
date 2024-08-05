@@ -57,7 +57,7 @@ if(biicore.bgMusic){
 			audioPlayer.setAttribute("src", biicore.bgMusic);
 			document.getElementsByClassName("bii-player")[0].style.display = "block";
 		}
-		audioPlayer.volume = 0.3;
+		audioPlayer.volume = 0.5;
 		audioPlayer.setAttribute("controls", "controls");
 		document.body.appendChild(audioPlayer);
 	}, 1000);
