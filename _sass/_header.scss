@@ -1,0 +1,22 @@
+header {
+  .carousel-inner {
+    height: calc(100vh - 56px);
+    .carousel-item {
+      img {
+        min-width: 100%;
+        min-height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        object-fit: cover; /* Ensure the image covers the area */
+      }
+    }
+    .carousel-caption {
+      top: 50%;
+      left: 50%;
+      right: auto;
+      bottom: auto;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
