@@ -9,7 +9,16 @@ $theme-dark: #222;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "base",
         "fonts",
-        "header"
+        "base",
+        "nav",
+        "header",
+        "save-the-date",
+        "couple",
+        "call-to-action",
+        "album",
+        "events",
+        "wishes",
+        "wedding-box",
+        "footer"
 ;
