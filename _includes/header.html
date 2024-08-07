@@ -1,7 +1,7 @@
 <header>
     <div id="carouselFade" class="carousel slide carousel-fade" data-ride="carousel" data-interval="2000">
         <ol class="carousel-indicators">
-            {% for image in site.data.media.mockSlide %}
+            {% for image in site.data.media.home %}
             {% assign is_active = '' %}
             {% if forloop.first %}
             {% assign is_active = 'active' %}
@@ -10,18 +10,23 @@
             {% endfor %}
         </ol>
         <div class="carousel-inner">
-            {% for image in site.data.media.mockSlide %}
+            {% for image in site.data.media.home %}
             {% assign is_active = '' %}
             {% if forloop.first %}
             {% assign is_active = 'active' %}
             {% endif %}
             <div class="carousel-item h-100 position-relative overflow-hidden {{ is_active }}">
-                <img src="{{ image }}" alt="Placehold {{ forloop.index }}" class="position-absolute w-auto h-auto">
+                <img src="{{ image | prepend: site.image_path }}" alt="Wedding slide photo {{ index }}"
+                    class="position-absolute w-auto h-auto">
             </div>
             {% endfor %}
             <div class="carousel-caption p-0">
-                <h2><span>Công Anh</span> - <span>Thùy Linh</span></h2>
-                <p>15 Tháng 09, 2024</p>
+                <div class="title text-title">
+                    <h2><span>Công Anh</span> - <span>Thùy Linh</span></h2>
+                </div>
+                <div class="date">
+                    <h5>15 Tháng 09, 2024</h5>
+                </div>
             </div>
         </div>
     </div>
