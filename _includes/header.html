@@ -1,5 +1,5 @@
 <header>
-    <div id="carouselFade" class="carousel slide carousel-fade" data-ride="carousel" data-interval="2000">
+    <div id="carouselFade" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000">
         <ol class="carousel-indicators">
             {% for image in site.data.media.home %}
             {% assign is_active = '' %}
@@ -16,7 +16,7 @@
             {% assign is_active = 'active' %}
             {% endif %}
             <div class="carousel-item h-100 position-relative overflow-hidden {{ is_active }}">
-                <img src="{{ image | prepend: site.image_path }}" alt="Wedding slide photo {{ index }}"
+                <img src="{{ image | prepend: site.data.media.image_path }}" alt="Wedding slide photo {{ index }}"
                     class="position-absolute w-auto h-auto">
             </div>
             {% endfor %}
