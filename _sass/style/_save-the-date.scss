@@ -1,3 +1,46 @@
 #save-the-date {
-    
+    #calendar {
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 100%;
+            table-layout: fixed;
+            /* Distributes the width evenly */
+        }
+
+        caption {
+            text-align: center;
+            /* Center the caption text */
+            font-weight: bold;
+            margin-bottom: 10px;
+            /* Space below the caption */
+            caption-side: top;
+        }
+
+        thead {
+            font-size: 0.6rem;
+        } 
+        
+        tbody {
+            font-size: 0.9rem;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+            word-wrap: break-word;
+            /* Ensures long text breaks into a new line */
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        td.highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+    }
 }
