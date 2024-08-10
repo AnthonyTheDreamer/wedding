@@ -1,0 +1,26 @@
+<section class="gallery-section section-padding" id="gallery">
+    <div class="container">
+        <div class="row">
+            <div class="col col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                <div class="section-title">
+                    <h2>Album Hình Cưới</h2>
+                    <p>Được ai đó yêu sâu sắc sẽ mang lại cho bạn sức mạnh, trong khi yêu ai đó sâu sắc sẽ cho
+                        bạn dũng khí.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-xs-12">
+                <div class="gallery-container gallery-fancybox masonry-gallery">
+                    {% for image in site.data.media.album %}
+                    <div class="grid grid-item">
+                        <a href="{{ image | prepend: site.image_path }}" class="fancybox" data-fancybox-group="gall-1">
+                            <img src="{{ image | prepend: site.image_path }}" alt="{{ image }}" class="img img-responsive">
+                        </a>
+                    </div> 
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

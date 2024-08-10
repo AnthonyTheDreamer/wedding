@@ -1,0 +1,41 @@
+<section class="couple-section section-padding" id="couple">
+    <div class="container">
+        <div class="row">
+            <div class="col col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                <div class="section-title">
+                    <h2>Cô dâu & Chú rể</h2>
+                    <p>Tình yêu là điều kiện trong đó hạnh phúc của người khác là điều cần thiết cho chính bạn.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-lg-10 col-lg-offset-1">
+                <div class="couple-area">
+                    <div class="couple-row clearfix">
+                        <div class="img-holder">
+                            <img src="{{ site.data.media.couple.groom | prepend: site.image_path }}"
+                                alt="{{ site.data.media.couple.groom }}">
+                        </div>
+                        <div class="details">
+                            <div class="inner">
+                                <h2>{{ site.data.main.groom.name }}</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="couple-row last-row clearfix">
+                        <div class="details">
+                            <div class="inner">
+                                <h2>{{ site.data.main.bride.name }}</h2>
+                            </div>
+                        </div>
+                        <div class="img-holder">
+                            <img src="{{ site.data.media.couple.bride | prepend: site.image_path }}"
+                                alt="{{ site.data.media.couple.bride }}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
