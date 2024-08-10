@@ -1,0 +1,33 @@
+<header>
+    <div id="carouselFade" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000">
+        <ol class="carousel-indicators">
+            {% for image in site.data.media.home %}
+            {% assign is_active = '' %}
+            {% if forloop.first %}
+            {% assign is_active = 'active' %}
+            {% endif %}
+            <li data-target="#carouselFade" data-slide-to="{{ forloop.index0 }}" class="{{ is_active }}"></li>
+            {% endfor %}
+        </ol>
+        <div class="carousel-inner">
+            {% for image in site.data.media.home %}
+            {% assign is_active = '' %}
+            {% if forloop.first %}
+            {% assign is_active = 'active' %}
+            {% endif %}
+            <div class="carousel-item h-100 position-relative overflow-hidden {{ is_active }}">
+                <img src="{{ image | prepend: site.data.media.image_path }}" alt="Wedding slide photo {{ index }}"
+                    class="position-absolute w-auto h-auto">
+            </div>
+            {% endfor %}
+            <div class="carousel-caption p-0">
+                <div class="title text-title">
+                    <h2><span>Công Anh</span> - <span>Thùy Linh</span></h2>
+                </div>
+                <div class="date">
+                    <h5>15 Tháng 09, 2024</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

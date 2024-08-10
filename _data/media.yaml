@@ -1,0 +1,36 @@
+image_path: img/
+favicon: favicon.jpg
+thumb: thumb.jpg
+home:
+  - slide1.jpg
+  - slide2.jpg
+couple:
+  groom: chure.jpg
+  bride: codau.jpg
+album:
+  - hinhcuoi1.jpg
+  - hinhcuoi2.jpg
+  - hinhcuoi3.jpg
+  - hinhcuoi4.jpg
+  - hinhcuoi5.jpg
+  - hinhcuoi6.jpg
+  - hinhcuoi7.jpg
+  - hinhcuoi8.jpg
+  - hinhcuoi9.jpg
+  - hinhcuoi11.jpg
+  - hinhcuoi10.jpg
+  - hinhcuoi12.jpg
+  - hinhcuoi13.jpg
+  - hinhcuoi14.jpg
+  - hinhcuoi15.jpg
+  - hinhcuoi16.jpg
+  - hinhcuoi17.jpg
+  - hinhcuoi18.jpg
+events:
+  - nhagai.jpg
+  - nhatrai.jpg
+events_background: hinhnen1.jpg
+wedding-box:
+  - qrcodau.jpg
+  - qrchure.jpg
+footer: thankyou.jpg
