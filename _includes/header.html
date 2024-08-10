@@ -1,5 +1,6 @@
 <header>
-    <div id="carouselFade" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000">
+    <div id="carouselFade" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000"
+        data-pause="false">
         <ol class="carousel-indicators">
             {% for image in site.data.media.home %}
             {% assign is_active = '' %}
@@ -20,12 +21,20 @@
                     class="position-absolute w-auto h-auto">
             </div>
             {% endfor %}
-            <div class="carousel-caption p-0">
+            <div class="carousel-caption p-0 w-100">
                 <div class="title text-title">
-                    <h2><span>Công Anh</span> - <span>Thùy Linh</span></h2>
+                    <h2>
+                        <span>{{ site.data.main.groom.name }}</span>
+                        <span class="heart-shape mt-3 mt-md-0 d-block d-md-inline">
+                            <i class="fa-regular fa-heart"></i>
+                        </span>
+                        <span>{{ site.data.main.bride.name }}</span>
+                    </h2>
                 </div>
-                <div class="date">
-                    <h5>15 Tháng 09, 2024</h5>
+                <div class="date text-center">
+                    <h5>
+                        <span>{{ site.data.main.date_full }}</span>
+                    </h5>
                 </div>
             </div>
         </div>
