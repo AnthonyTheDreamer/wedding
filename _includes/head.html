@@ -11,11 +11,11 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Thiệp mời Hôn lễ {{ site.data.main.groom.name }} & {{ site.data.main.bride.name }}" />
     <meta property="og:description" content="Trân trọng kính mời bạn đến tham dự buổi tiệc mừng lễ thành hôn của {{ site.data.main.groom.name }} và {{ site.data.main.bride.name }}!" />
-    <meta property="og:image:url" content="{{ site.data.media.thumb | prepend: site.image_path }}">
-    <meta property="og:image" content="{{ site.data.media.thumb | prepend: site.image_path }}">
-    <meta property="og:image:secure_url" content="{{ site.data.media.thumb | prepend: site.image_path }}">
+    <meta property="og:image:url" content="{{ site.data.media.thumb | prepend: site.data.media.image_path }}">
+    <meta property="og:image" content="{{ site.data.media.thumb | prepend: site.data.media.image_path }}">
+    <meta property="og:image:secure_url" content="{{ site.data.media.thumb | prepend: site.data.media.image_path }}">
 
-    <link rel="shortcut icon" type="image/x-icon" href="{{ site.data.media.favicon | prepend: site.image_path }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ site.data.media.favicon | prepend: site.data.media.image_path }}">
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
