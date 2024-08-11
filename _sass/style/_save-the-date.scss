@@ -1,4 +1,9 @@
 #save-the-date {
+    .card-body {
+        border-style: solid;
+        border-width: 5px;
+    }
+
     #calendar {
         table {
             border-collapse: collapse;
@@ -12,35 +17,37 @@
             text-align: center;
             /* Center the caption text */
             font-weight: bold;
-            margin-bottom: 10px;
             /* Space below the caption */
             caption-side: top;
         }
 
         thead {
-            font-size: 0.6rem;
-        } 
-        
+            th {
+                border-top: 1px solid #ddd;
+                border-bottom: 1px solid #ddd;
+                padding: 10px;
+                text-align: center;
+            }
+        }
+
         tbody {
-            font-size: 0.9rem;
-        }
+            td {
+                padding: 10px;
+                text-align: center;
+                border: none;
 
-        th,
-        td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: center;
-            word-wrap: break-word;
-            /* Ensures long text breaks into a new line */
-        }
-
-        th {
-            background-color: #f4f4f4;
-        }
-
-        td.highlight {
-            background-color: yellow;
-            font-weight: bold;
+                /* Remove borders from day cells */
+                .highlight {
+                    background-color: yellow;
+                    border-radius: 50%;
+                    color: black;
+                    /* Adjust the size to make sure it forms a circle */
+                    display: inline-block;
+                    /* Center the text vertically */
+                    text-align: center;
+                    /* Center the text horizontally */
+                }
+            }
         }
     }
 }

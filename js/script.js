@@ -26,19 +26,19 @@ $(document).ready(function () {
     });
   }
 
+  // Generate Calendar
   function generateCalendar(day, month, year) {
     var monthNames = [
-      "January", "February", "March", "April", "May", "June",
-      "July", "August", "September", "October", "November", "December"
+      "Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6", "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12"
     ];
 
-    var dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    var dayNames = ["CN", "T2", "T3", "T4", "T5", "T6", "T7"];
 
     var firstDay = new Date(year, month - 1, 1).getDay();
     var daysInMonth = new Date(year, month, 0).getDate();
 
     var $table = $('<table></table>');
-    var $caption = $('<caption></caption>').text(monthNames[month - 1] + ' ' + year);
+    var $caption = $('<caption></caption>').text(monthNames[month - 1] + ', ' + year);
     var $thead = $('<thead></thead>');
     var $headerRow = $('<tr></tr>');
 
@@ -84,6 +84,20 @@ $(document).ready(function () {
     $table.append($caption).append($thead).append($tbody);
     return $table;
   }
+
+  // Fancybox
+  Fancybox.bind("[data-fancybox]", {
+    Images: {
+      protected: true
+    },
+    Toolbar: {
+      display: {
+        left: [],
+        middle: ["infobar"],
+        right: ["close"],
+      },
+    }
+  });
 
   smoothScrolling();
   $('#calendar').append(generateCalendar(15, 9, 2024));

@@ -3,5 +3,15 @@
         <h1 class="text-center text-title">Album hình cưới</h1>
         <h4 class="pt-4 pb-5 text-center">Được ai đó yêu sâu sắc sẽ mang lại cho bạn sức mạnh, trong khi yêu ai đó sâu
             sắc sẽ cho bạn dũng khí.</h4>
+
+        <div class="card-columns">
+            {% for image in site.data.media.album %}
+            <a data-src="{{ image | prepend: site.data.media.image_path }}" data-fancybox="gallery" role="button">
+                <div class="card">
+                    <img src="{{ image | prepend: site.data.media.image_path }}" class="card-img-top" alt="{{ image }}">
+                </div>
+            </a>
+            {% endfor %}
+        </div>
     </div>
 </section>
