@@ -1,3 +1,19 @@
 footer {
-    
+    background: url("../img/assets/footer-shape.png") center bottom/100% no-repeat local;
+
+    .footer-image {
+        background: url("../img/assets/footer-couple-pic-frame.png") center center/cover no-repeat local;
+    }
+
+    h1 {
+        font-size: 4.8rem;
+        line-height: 1.8em;
+        margin: 0.8em 0;
+    }
+
+    @media (max-width: 575px) {
+        h1 {
+            font-size: 3rem;
+        }
+    }
 }

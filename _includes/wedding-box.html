@@ -1,20 +1,41 @@
 <section id="wedding-box" class="bg-light">
     <div class="container">
-        <h1 class="text-center text-title">Mừng cưới</h1>
         <div class="row justify-content-center">
-            <div class="col col-md-6 col-lg-4">
-                <div class="card">
-                    <div class="card-body text-center px-5 py-3">
-                        <h5 class="card-title">Mừng cưới chú rể</h5>
+            <div class="col-12 col-md-10 pb-5">
+                <div class="text-center">
+                    <h1 class="text-title text-capitalize font-weight-bold">Mừng cưới</h1>
+                </div>
+            </div>
+            {% for box in site.data.main.wedding-box %}
+            {% assign card_style = '' %}
+            {% if forloop.index0 > 0 %}
+            {% assign card_style = 'mt-5 mt-md-0' %}
+            {% endif %}
+            <div class="col-12 col-sm-10 col-md-6 col-lg-4 {{ card_style }}">
+                <div class="card rounded-lg border-primary h-100">
+                    <div class="card-body text-center p-4">
+                        <h5 class="card-title text-capitalize font-weight-bold">{{ box.title }}</h5>
 
-                        
+                        <div class="row justify-content-center">
+                            <div class="col-6 col-md-8">
+                                <img class="img-fluid border"
+                                    src="{{ site.data.media.wedding-box[forloop.index0] | prepend: site.data.media.image_path }}"
+                                    alt="{{ site.data.media.wedding-box[forloop.index0] }}">
+                            </div>
+                        </div>
 
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <div class="mt-3">
+                            <p>Ngân hàng: <span class="font-weight-bold">{{ box.bank }}</span>
+                            </p>
+                            <p>Tên tài khoản: <span class="font-weight-bold">{{ box.name }}</span>
+                            </p>
+                            <p>Số tài khoản: <span class="font-weight-bold">{{ box.number }}</span>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
     </div>
 </section>
