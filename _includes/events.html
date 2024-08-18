@@ -13,7 +13,11 @@
         <div class="container">
             <div class="row justify-content-center">
                 {% for event in site.data.main.events %}
-                <div class="col-12 col-md-6 col-lg-4">
+                {% assign card_style = '' %}
+                {% if forloop.index0 > 0 %}
+                {% assign card_style = 'mt-5 mt-md-0' %}
+                {% endif %}
+                <div class="col-12 col-md-6 col-lg-4 {{ card_style }}">
                     <div class="card bg-section border-0 rounded-0 shadow h-100">
                         <div class="card-body text-center">
                             <h5 class="card-title">{{ event.title }}</h5>

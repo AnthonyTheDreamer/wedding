@@ -29,7 +29,7 @@ $(document).ready(function () {
   // Generate Calendar
   function generateCalendar(day, month, year) {
     var monthNames = [
-      "Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6", "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12"
+      "THÁNG 1", "THÁNG 2", "THÁNG 3", "THÁNG 4", "THÁNG 5", "THÁNG 6", "THÁNG 7", "THÁNG 8", "THÁNG 9", "THÁNG 10", "THÁNG 11", "THÁNG 12"
     ];
 
     var dayNames = ["CN", "T2", "T3", "T4", "T5", "T6", "T7"];
@@ -38,7 +38,7 @@ $(document).ready(function () {
     var daysInMonth = new Date(year, month, 0).getDate();
 
     var $table = $('<table></table>');
-    var $caption = $('<caption></caption>').text(monthNames[month - 1] + ', ' + year);
+    var $caption = $('<caption></caption>').text(monthNames[month - 1] + ' / ' + year);
     var $thead = $('<thead></thead>');
     var $headerRow = $('<tr></tr>');
 
@@ -65,10 +65,15 @@ $(document).ready(function () {
         dayOfWeek = 0;
       }
 
-      var $cell = $('<td></td>').text(date);
+      var $cell;
+
       if (date == day) {
-        $cell.addClass('highlight');
+        $cell = $('<td></td>').addClass('highlight');
+        $cell.append($('<div></div>').text(date));
+      } else {
+        $cell = $('<td></td>').text(date);
       }
+
       $currentRow.append($cell);
       dayOfWeek++;
     }

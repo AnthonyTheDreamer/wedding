@@ -17,6 +17,14 @@
                 text-shadow: 0px 3px 7px rgba(0, 0, 0, .35)
             }
         }
+
+        .card {
+            .btn-outline-primary {
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
     }
 
     @media (min-width: 768px) {

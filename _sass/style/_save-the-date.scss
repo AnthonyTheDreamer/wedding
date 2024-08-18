@@ -21,6 +21,11 @@
             caption-side: top;
         }
 
+        thead, tbody {
+            white-space: nowrap;
+            font-size: 0.9rem;
+        }
+
         thead {
             th {
                 border-top: 1px solid #ddd;
@@ -38,14 +43,17 @@
 
                 /* Remove borders from day cells */
                 .highlight {
-                    background-color: yellow;
+                    background-color: $primary;
+                    color: $white;
                     border-radius: 50%;
-                    color: black;
                     /* Adjust the size to make sure it forms a circle */
                     display: inline-block;
                     /* Center the text vertically */
                     text-align: center;
                     /* Center the text horizontally */
+                    width: 21.6px;
+                    height: 21.6px;
+                    line-height: 22px;
                 }
             }
         }
