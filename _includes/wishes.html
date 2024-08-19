@@ -9,111 +9,94 @@
                 </div>
             </div>
 
-            <div class="col-12 col-lg-10 col-xl-8">
+            <div class="col-12 col-lg-10 col-xl-9">
                 <div class="card rounded-0 border-primary">
                     <div class="card-body p-5">
                         <form>
                             <div class="form-group row">
-                                <label for="colFormLabelLg" class="col-12 col-md-3 col-form-label">
+                                <label for="colFormLabelLg" class="col-12 col-md-4 col-form-label">
                                     Họ & Tên
                                 </label>
-                                <div class="col-12 col-md-9">
+                                <div class="col-12 col-md-8">
                                     <input type="text" class="form-control" id="colFormLabelLg">
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="exampleFormControlTextarea1" class="col-12 col-md-3 col-form-label">
+                                <label for="exampleFormControlTextarea1" class="col-12 col-md-4 col-form-label">
                                     Lời chúc
                                 </label>
-                                <div class="col-12 col-md-9">
+                                <div class="col-12 col-md-8">
                                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label class="col-12 col-md-3 col-form-label">
+                                <label class="col-12 col-md-4 col-form-label">
                                     Xác nhận tham dự
                                 </label>
-                                <div class="col-12 col-md-9">
+                                <div class="col-12 col-md-8">
                                     <div class="row">
-                                        <div class="col-6">
-                                            <div class="form-check form-check-inline w-100">
-                                                <input class="form-check-input d-none" type="radio"
-                                                    name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                                <label class="card text-center w-100" for="inlineRadio1" role="button">
-                                                    <div class="card-body">
-                                                        <h1><i class="fa-regular fa-face-smile"></i></h1>
-                                                        <p class="card-text">Đi được</p>
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <i class="fa-regular fa-circle"></i>
-                                                        <i class="fa-regular fa-circle-check"></i>
-                                                    </div>
-                                                </label>
-                                            </div>
+                                        <div class="col-6 card-radio">
+                                            <input class="form-check-input d-none" type="radio"
+                                                name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                            <label class="card text-center h-100" for="inlineRadio1" role="button">
+                                                <div class="card-body">
+                                                    <h1><i class="fa-regular fa-face-smile"></i></h1>
+                                                    <p class="card-text">Đi được</p>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <i class="fa-regular fa-circle"></i>
+                                                    <i class="fa-regular fa-circle-check"></i>
+                                                </div>
+                                            </label>
                                         </div>
-                                        <div class="col-6">
-                                            <div class="form-check form-check-inline w-100">
-                                                <input class="form-check-input d-none" type="radio"
-                                                    name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                                <label class="card text-center w-100" for="inlineRadio2" role="button">
-                                                    <div class="card-body">
-                                                        <h1><i class="fa-regular fa-face-frown"></i></h1>
-                                                        <p class="card-text">Không đi được</p>
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <i class="fa-regular fa-circle"></i>
-                                                        <i class="fa-regular fa-circle-check"></i>
-                                                    </div>
-                                                </label>
-                                            </div>
+                                        <div class="col-6 card-radio">
+                                            <input class="form-check-input d-none" type="radio"
+                                                name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                            <label class="card text-center h-100" for="inlineRadio2" role="button">
+                                                <div class="card-body">
+                                                    <h1><i class="fa-regular fa-face-frown"></i></h1>
+                                                    <p class="card-text">Không đi được</p>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <i class="fa-regular fa-circle"></i>
+                                                    <i class="fa-regular fa-circle-check"></i>
+                                                </div>
+                                            </label>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label class="col-12 col-md-3 col-form-label">
+                                <label class="col-12 col-md-4 col-form-label">
                                     Địa điểm tham dự
                                 </label>
-                                <div class="col-12 col-md-9">
+                                <div class="col-12 col-md-8">
                                     <div class="row">
-                                        <div class="col-6">
-                                            <div class="form-check form-check-inline w-100">
-                                                <input class="form-check-input d-none" type="radio"
-                                                    name="inlineRadioOptions2" id="hn" value="option1">
-                                                <label class="card text-center w-100" for="hn" role="button">
-                                                    <div class="card-body">
-                                                        <p class="card-text">Hà Nội</p>
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <i class="fa-regular fa-circle"></i>
-                                                        <i class="fa-regular fa-circle-check"></i>
-                                                    </div>
-                                                </label>
-                                            </div>
+                                        {% for event in site.data.main.events %}
+                                        {% assign row_length = 12 | divided_by: forloop.length | floor %}
+                                        <div class="col-{{row_length}} card-radio">
+                                            <input class="form-check-input d-none" type="radio" name="location"
+                                                id="event-{{forloop.index}}" value="{{ event.title }}" {% if
+                                                forloop.last %}checked{% endif %}>
+                                            <label class="card text-center h-100" for="event-{{forloop.index}}"
+                                                role="button">
+                                                <img src="{{ site.data.media.events[forloop.index0] | prepend: site.data.media.image_path }}"
+                                                    alt="{{ site.data.media.events[forloop.index0] }}"
+                                                    class="card-img-top img-fluid">
+                                                <div class="card-body">
+                                                    <p class="card-text">{{ event.title }}</p>
+                                                </div>
+                                            </label>
                                         </div>
-                                        <div class="col-6">
-                                            <div class="form-check form-check-inline w-100">
-                                                <input class="form-check-input d-none" type="radio"
-                                                    name="inlineRadioOptions2" id="tb" value="option2">
-                                                <label class="card text-center w-100" for="tb" role="button">
-                                                    <div class="card-body">
-                                                        <p class="card-text">Thái Bình</p>
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <i class="fa-regular fa-circle"></i>
-                                                        <i class="fa-regular fa-circle-check"></i>
-                                                    </div>
-                                                </label>
-                                            </div>
-                                        </div>
+                                        {% endfor %}
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="d-flex justify-content-center">
+                            <div class="d-flex justify-content-center mt-3 mt-md-5">
                                 <button type="submit" class="btn btn-primary text-white">
                                     Gửi lời chúc <i class="fa-regular fa-paper-plane"></i>
                                 </button>
