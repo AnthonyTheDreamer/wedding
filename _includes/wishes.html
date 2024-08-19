@@ -14,20 +14,20 @@
                     <div class="card-body p-5">
                         <form>
                             <div class="form-group row">
-                                <label for="colFormLabelLg" class="col-12 col-md-4 col-form-label">
+                                <label for="name" class="col-12 col-md-4 col-form-label">
                                     Họ & Tên
                                 </label>
                                 <div class="col-12 col-md-8">
-                                    <input type="text" class="form-control" id="colFormLabelLg">
+                                    <input type="text" class="form-control" id="name" name="name">
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="exampleFormControlTextarea1" class="col-12 col-md-4 col-form-label">
+                                <label for="wish" class="col-12 col-md-4 col-form-label">
                                     Lời chúc
                                 </label>
                                 <div class="col-12 col-md-8">
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                                    <textarea class="form-control" id="wish" rows="5" name="wish"></textarea>
                                 </div>
                             </div>
 
@@ -38,9 +38,9 @@
                                 <div class="col-12 col-md-8">
                                     <div class="row">
                                         <div class="col-6 card-radio">
-                                            <input class="form-check-input d-none" type="radio"
-                                                name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                            <label class="card text-center h-100" for="inlineRadio1" role="button">
+                                            <input class="form-check-input d-none" type="radio" name="confirm"
+                                                id="confirm-yes" value="yes">
+                                            <label class="card text-center h-100" for="confirm-yes" role="button">
                                                 <div class="card-body">
                                                     <h1><i class="fa-regular fa-face-smile"></i></h1>
                                                     <p class="card-text">Đi được</p>
@@ -52,9 +52,9 @@
                                             </label>
                                         </div>
                                         <div class="col-6 card-radio">
-                                            <input class="form-check-input d-none" type="radio"
-                                                name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                            <label class="card text-center h-100" for="inlineRadio2" role="button">
+                                            <input class="form-check-input d-none" type="radio" name="confirm"
+                                                id="confirm-no" value="confirm-no">
+                                            <label class="card text-center h-100" for="confirm-no" role="button">
                                                 <div class="card-body">
                                                     <h1><i class="fa-regular fa-face-frown"></i></h1>
                                                     <p class="card-text">Không đi được</p>
@@ -69,7 +69,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-group row">
+                            <div class="form-group row d-none" id="location-group">
                                 <label class="col-12 col-md-4 col-form-label">
                                     Địa điểm tham dự
                                 </label>
@@ -87,7 +87,7 @@
                                                     alt="{{ site.data.media.events[forloop.index0] }}"
                                                     class="card-img-top img-fluid">
                                                 <div class="card-body">
-                                                    <p class="card-text">{{ event.title }}</p>
+                                                    <p class="card-text">{{ event.title }} ({{ event.location }})</p>
                                                 </div>
                                             </label>
                                         </div>
@@ -101,6 +101,8 @@
                                     Gửi lời chúc <i class="fa-regular fa-paper-plane"></i>
                                 </button>
                             </div>
+
+                            <div id="valid-message" class="text-center mt-2"></div>
                         </form>
                     </div>
                 </div>
