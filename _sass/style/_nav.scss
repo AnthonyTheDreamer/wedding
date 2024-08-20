@@ -1,1 +1,32 @@
 nav {}
+
+aside {
+    @media (max-width: 991px) {
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 100vh;
+        transition: right 0.3s ease;
+        z-index: 1040;
+
+        &.open {
+            right: 0;
+        }
+    }
+}
+
+#backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1039;
+    display: none;
+
+    &.show {
+        display: block;
+    }
+}

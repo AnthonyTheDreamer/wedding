@@ -1,52 +1,57 @@
 <section id="events" class="bg-light pt-0">
     <div class="bg-event min-vh-100"></div>
 
-    <div class="event-section min-vh-100 row justify-content-center">
-        <div class="event-title col-12 col-md-10 pb-5">
-            <div class="text-center text-light">
-                <h1 class="text-title text-capitalize font-weight-bold">Sự kiện cưới</h1>
-                <p class="pt-2 font-weight-normal">...tình yêu không phải là nhìn vào nhau, mà là nhìn về chung một
-                    hướng...</p>
+    <div class="container event-section min-vh-100 ">
+        <div class="row justify-content-center">
+            <div class="event-title col-12 col-md-10 pb-5">
+                <div class="text-center text-light">
+                    <h1 class="text-title text-capitalize font-weight-bold">Sự kiện cưới</h1>
+                    <p class="pt-2 font-weight-normal">...tình yêu không phải là nhìn vào nhau, mà là nhìn về chung một
+                        hướng...</p>
+                </div>
             </div>
         </div>
 
-        <div class="container">
-            <div class="row justify-content-center">
-                {% for event in site.data.main.events %}
-                {% assign card_style = '' %}
-                {% if forloop.index0 > 0 %}
-                {% assign card_style = 'mt-5 mt-md-0' %}
-                {% endif %}
-                <div class="col-12 col-md-6 col-lg-4 {{ card_style }}">
-                    <div class="card bg-section border-0 rounded-0 shadow h-100">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">{{ event.title }}</h5>
-
-                            <img src="{{ site.data.media.events[forloop.index0] | prepend: site.data.media.image_path }}"
-                                alt="{{ site.data.media.events[forloop.index0] }}" class="img-fluid">
-
-                            <div class="card-text">
-                                <p>
-                                    <strong>{{ event.date }}</strong>
-                                </p>
-                                {% if event.location %}
-                                <p>
-                                    <i>{{ event.location }}</i>
-                                </p>
-                                {% endif %}
-                                <p>{{ event.address }}</p>
-                                {% if event.link %}
-                                <a href="{{ event.link }}" target="_blank" class="btn btn-outline-primary rounded-pill">
-                                    Xem bản đồ
-                                </a>
-                                {% endif %}
+        <div class="row justify-content-center">
+            {% for event in site.data.main.events %}
+            {% assign card_style = '' %}
+            {% if forloop.index0 > 0 %}
+            {% assign card_style = 'mt-5 mt-sm-0' %}
+            {% endif %}
+            <div class="col-12 col-sm-6 col-lg-4 {{ card_style }}">
+                <div class="card bg-section border-0 rounded-0 shadow h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">{{ event.title }}</h5>
+                        <div class="row justify-content-center mb-4">
+                            <div class="col-4 col-sm-6 border border-primary">
                             </div>
-
                         </div>
+
+                        <img src="{{ site.data.media.events[forloop.index0] | prepend: site.data.media.image_path }}"
+                            alt="{{ site.data.media.events[forloop.index0] }}" class="img-fluid">
+
+                        <div class="card-text mt-3">
+                            <p>
+                                <strong>{{ event.date }}</strong>
+                            </p>
+                            {% if event.place %}
+                            <p>
+                                <i>{{ event.place }}</i>
+                            </p>
+                            {% endif %}
+                            <p>{{ event.address }}</p>
+                            {% if event.link %}
+                            <a href="{{ event.link }}" target="_blank"
+                                class="btn btn-outline-primary btn-block rounded-pill">
+                                Xem bản đồ
+                            </a>
+                            {% endif %}
+                        </div>
+
                     </div>
                 </div>
-                {% endfor %}
             </div>
+            {% endfor %}
         </div>
     </div>
 </section>

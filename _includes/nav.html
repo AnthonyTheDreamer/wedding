@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg fixed-top shadow navbar-light bg-light">
     <div class="container">
         <a class="navbar-brand d-block d-lg-none" href="#header">
             <h3 class="text-primary m-0">
@@ -7,13 +7,13 @@
                 {{ site.data.main.bride.letter }}
             </h3>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
-            aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+
+        <button class="btn btn-primary text-light d-block d-lg-none" type="button" id="sidebarToggle"
+            aria-label="Toggle sidebar">
+            <i class="fa-solid fa-bars"></i>
         </button>
 
-
-        <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+        <div class="collapse navbar-collapse justify-content-center">
             <ul class="navbar-nav font-weight-bold">
                 <li class="nav-item">
                     <a class="nav-link px-3" href="#couple">Cặp đôi</a>
@@ -34,3 +34,27 @@
         </div>
     </div>
 </nav>
+
+<aside class="d-block d-lg-none shadow navbar-light bg-light">
+    <div class="p-4">
+        <ul class="navbar-nav font-weight-bold">
+            <li class="nav-item">
+                <a class="nav-link px-3" href="#couple">Cặp đôi</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link px-3" href="#album">Album cưới</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link px-3" href="#events">Sự kiện</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link px-3" href="#wishes">Sổ lưu bút</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link px-3" href="#wedding-box">Mừng cưới</a>
+            </li>
+        </ul>
+    </div>
+</aside>
+
+<div id="backdrop"></div>

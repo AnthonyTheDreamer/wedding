@@ -90,6 +90,26 @@ $(document).ready(function () {
     return $table;
   }
 
+  // sidebar function
+  function hideSidebar() {
+    $('aside').removeClass('open');
+    $('#backdrop').removeClass('show');
+  }
+
+  $('#sidebarToggle').click(function () {
+    $('aside').toggleClass('open');
+    $('#backdrop').toggleClass('show');
+  });
+
+  $('#backdrop').click(hideSidebar);
+  $('aside .nav-link').click(hideSidebar);
+
+  $(window).resize(function () {
+    if ($(window).width() >= 992) {
+      hideSidebar();
+    }
+  });
+
   // Show/Hide Location options based on Attendance Confirmation
   $('input[name="confirm"]').on('change', function () {
     if ($(this).val() === 'yes') {
