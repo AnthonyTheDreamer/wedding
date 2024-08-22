@@ -1,6 +1,8 @@
 header {
+  margin-top: 56px;
+
   .carousel-inner {
-    height: 100vh;
+    height: calc(100vh - 56px);
 
     .carousel-item {
       img {
