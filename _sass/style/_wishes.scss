@@ -1,46 +1,57 @@
 #wishes {
-    .border-primary {
+    .wish-form {
         border-style: solid;
         border-width: 2px;
-    }
+        position: relative;
 
-    .card-radio {
-        .card {
-            transition: all 0.5s ease;
-            -webkit-transition: all 0.5s ease;
-            -ms-transition: all 0.5s ease;
-            color: $secondary;
+        &::before {
+            content: "";
+            width: calc(100% - 4px);
+            height: calc(100% - 4px);
+            border: 2px solid $primary;
+            position: absolute;
+            left: 2px;
+            top: 2px;
+        }
 
-            .card-footer {
+        .card-radio {
+            .card {
                 transition: all 0.5s ease;
                 -webkit-transition: all 0.5s ease;
                 -ms-transition: all 0.5s ease;
+                color: $secondary;
+
+                .card-footer {
+                    transition: all 0.5s ease;
+                    -webkit-transition: all 0.5s ease;
+                    -ms-transition: all 0.5s ease;
+                }
+
+                &:hover {
+                    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
+                }
+
+                .fa-circle-check {
+                    display: none;
+                }
             }
 
-            &:hover {
-                box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
-            }
+            .form-check-input:checked+.card {
+                border-color: $primary;
+                color: $primary;
 
-            .fa-circle-check {
-                display: none;
-            }
-        }
+                .card-footer {
+                    background-color: $primary;
+                    color: $light;
+                }
 
-        .form-check-input:checked+.card {
-            border-color: $primary;
-            color: $primary;
+                .fa-circle {
+                    display: none;
+                }
 
-            .card-footer {
-                background-color: $primary;
-                color: $light;
-            }
-
-            .fa-circle {
-                display: none;
-            }
-
-            .fa-circle-check {
-                display: inline-block;
+                .fa-circle-check {
+                    display: inline-block;
+                }
             }
         }
     }
