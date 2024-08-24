@@ -1,9 +1,15 @@
 <footer class="mt-auto min-vh-100 d-flex align-items-center">
     <div class="container text-center">
         <div class="row justify-content-center">
-            <div class="col-8 col-md-6 col-lg-4 footer-image">
-                <img src="{{ site.data.media.footer | prepend: site.data.media.image_path }}"
-                    alt="{{ site.data.media.footer }}" class="img-fluid rounded-circle">
+            <div class="col-12 col-sm-10 col-md-8 col-lg-6">
+                <div class="frame-image position-relative">
+                    <img src="../img/assets/footer-couple-pic-frame.png" alt="Frame Image"
+                        class="img-fluid position-relative">
+                    <div class="rounded-circle position-absolute overflow-hidden footer-image">
+                        <img src="{{ site.data.media.footer | prepend: site.data.media.image_path }}"
+                            alt="{{ site.data.media.footer }}" class="img-fluid">
+                    </div>
+                </div>
             </div>
         </div>
         <h1 class="text-title">Thank you! </h1>
