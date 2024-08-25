@@ -1,7 +1,23 @@
 <section id="album">
     <div class="container">
-        <h1 class="text-center text-title">Album hình cưới</h1>
-        <h4 class="pt-4 pb-5 text-center">Được ai đó yêu sâu sắc sẽ mang lại cho bạn sức mạnh, trong khi yêu ai đó sâu
-            sắc sẽ cho bạn dũng khí.</h4>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 pb-5">
+                <div class="text-center section-title">
+                    <h1 class="text-title text-capitalize font-weight-bold">Album hình cưới</h1>
+                    <p class="pt-2 font-weight-normal">Được ai đó yêu sâu sắc sẽ mang lại cho bạn sức mạnh, trong khi
+                        yêu ai đó sâu sắc sẽ cho bạn dũng khí.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-columns">
+            {% for image in site.data.media.album %}
+            <a data-src="{{ image | prepend: site.data.media.image_path }}" data-fancybox="gallery" role="button">
+                <div class="card">
+                    <img src="{{ image | prepend: site.data.media.image_path }}" class="card-img-top" alt="{{ image }}">
+                </div>
+            </a>
+            {% endfor %}
+        </div>
     </div>
 </section>

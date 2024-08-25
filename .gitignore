@@ -135,3 +135,4 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+!_sass/bootstrap/vendor

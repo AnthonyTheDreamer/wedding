@@ -1,3 +1,119 @@
 #save-the-date {
-    
+    .left-vec {
+        background: url("../img/assets/invitation-left-img.png") center center/cover no-repeat local;
+        width: 220px;
+        height: 414px;
+        position: absolute;
+        left: -150px;
+        top: -100px;
+    }
+
+    .right-vec {
+        background: url("../img/assets/invitation-right-image.png") center center/cover no-repeat local;
+        width: 400px;
+        height: 508px;
+        position: absolute;
+        right: -120px;
+        bottom: -100px;
+    }
+
+    .card-body {
+        border-style: solid;
+        border-width: 5px;
+    }
+
+    #calendar {
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 100%;
+            table-layout: fixed;
+        }
+
+        caption {
+            text-align: center;
+            font-weight: bold;
+            caption-side: top;
+        }
+
+        thead,
+        tbody {
+            white-space: nowrap;
+            font-size: 0.9rem;
+        }
+
+        thead {
+            th {
+                border-top: 1px solid #ddd;
+                border-bottom: 1px solid #ddd;
+                padding: 10px;
+                text-align: center;
+            }
+        }
+
+        tbody {
+            td {
+                padding: 10px;
+                text-align: center;
+                border: none;
+
+                &.highlight {
+                    position: relative;
+                    text-align: center;
+                    color: $white;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 2.5rem;
+                        height: 2.5rem;
+                        background-color: $primary;
+                        opacity: (75%);
+                        border-radius: 50%;
+                        transform: translate(-50%, -50%);
+                        z-index: 0;
+                    }
+
+                    div {
+                        position: relative;
+                        z-index: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        .left-vec {
+            width: 150px;
+            height: 281px;
+            position: absolute;
+            left: -80px;
+            top: -80px;
+        }
+
+        .right-vec {
+            width: 300px;
+            height: 381px;
+            right: -80px;
+            bottom: -50px;
+        }
+    }
+
+    @media (max-width: 575px) {
+        #calendar {
+            tbody {
+                td {
+                    &.highlight {
+                        &::before {
+                            width: 2rem;
+                            height: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

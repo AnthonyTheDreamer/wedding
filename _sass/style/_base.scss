@@ -10,10 +10,13 @@ body {
   height: 100%;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   font-family: "comfortaa", sans-serif;
   background-color: #fff;
-  font-size: 18px;
 }
 
 .bg-section {
@@ -22,8 +25,33 @@ body {
 
 section {
   padding: 120px 0;
+
+  .section-title {
+    padding-top: 59px;
+
+    &::before {
+      content: "";
+      background: url("../img/assets/section-title-flower.png") center center/cover no-repeat local;
+      width: 126px;
+      height: 59px;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+      top: 0;
+    }
+  }
 }
 
 .text-title {
   font-family: "dancingscript", cursive;
+}
+
+@media (max-width: 575px) {
+  html {
+    font-size: 14px;
+  }
 }

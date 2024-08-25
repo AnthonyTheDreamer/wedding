@@ -1,0 +1,12 @@
+---
+---
+
+@charset "utf-8";
+
+// importing core styling file
+@import './fontawesome/fontawesome.scss';
+
+// our project needs Classic Solid, Brands, and Sharp Solid
+@import './fontawesome/solid.scss';
+@import './fontawesome/regular.scss';
+@import './fontawesome/brands.scss';
