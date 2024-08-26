@@ -125,7 +125,6 @@ $(document).ready(function () {
 
     var isValid = true;
     var $validMessage = $('#valid-message');
-    var $submitButton = $('button[type="submit"]');
 
     // Clear previous valid message
     $validMessage.text('');
