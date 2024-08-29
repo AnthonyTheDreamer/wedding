@@ -1,4 +1,9 @@
-$(document).ready(function () {
+$(window).on('load', function () {
+  // Scroll to the top of the page
+  setTimeout(function () {
+    $('html, body').scrollTop(0);
+  }, 0);
+
   function smoothScrolling() {
     // Add smooth scrolling to all links
     $("a").on("click", function (event) {
@@ -19,7 +24,7 @@ $(document).ready(function () {
           800,
           function () {
             // Add hash (#) to URL when done scrolling (default click behavior)
-            window.location.hash = hash;
+            // window.location.hash = hash;
           }
         );
       } // End if
@@ -104,6 +109,7 @@ $(document).ready(function () {
   $('#backdrop').click(hideSidebar);
   $('aside .nav-link').click(hideSidebar);
 
+  // sidebar show/hide by screen size
   $(window).resize(function () {
     if ($(window).width() >= 992) {
       hideSidebar();
@@ -206,6 +212,61 @@ $(document).ready(function () {
     }
   });
 
+  // audio
+  var audioPlayer = $('#audioPlayer');
+  var playPauseBtn = $('#playPauseBtn');
+
+  // Set initial volume to 50% using jQuery
+  audioPlayer.prop('volume', 0.5);
+
+  // Function to update play/pause button state
+  function updatePlayPauseBtn() {
+    if (audioPlayer[0].paused) {
+      playPauseBtn.html('<i class="fas fa-volume-xmark"></i>');
+    } else {
+      playPauseBtn.html('<i class="fas fa-volume-high"></i>');
+    }
+  }
+
+  // Play/Pause button click event
+  playPauseBtn.on('click', function () {
+    if (audioPlayer[0].paused) {
+      audioPlayer[0].play();
+    } else {
+      audioPlayer[0].pause();
+    }
+    updatePlayPauseBtn()
+  });
+
+  // Envelope Open
+  function open() {
+    $('#envelope').addClass("opened")
+      .removeClass("closed");
+
+    if (audioPlayer[0].paused) {
+      audioPlayer[0].play();
+      updatePlayPauseBtn();
+    }
+
+    setTimeout(function () {
+      $('#envelope').parent().css('opacity', '0').css('visibility', 'hidden');
+      $('body').removeClass('overflow-hidden');
+
+      setTimeout(function () {
+        $('#envelope').parent().css('display', 'none')
+      }, 1000)
+    }, 2000);
+  }
+
+  $('#envelope').click(function () {
+    open();
+  });
+
+  // autorun open if not clicked
+  setTimeout(function () {
+    open();
+  }, 2000);
+
   smoothScrolling();
-  $('#calendar').append(generateCalendar(15, 9, 2024));
+  $('#calendar').append(generateCalendar(jsonData.date.day || 1, jsonData.date.month || 1, jsonData.date.year || 2024));
 });

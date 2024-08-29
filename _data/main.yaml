@@ -4,8 +4,12 @@ groom:
 bride:
   name: Thùy Linh
   letter: TL
-date: 15/09/2024
-date_full: 15 Tháng 09 2024
+date:
+  day: 15
+  month: 9
+  year: 2024
+  short: 15/09/2024
+  full: 15 Tháng 09 2024
 events:
   - title: Tiệc cưới nhà gái
     date: 11:00 08/09/2024
