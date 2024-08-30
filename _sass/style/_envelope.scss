@@ -42,19 +42,19 @@ $heart-width : 50px;
 }
 
 .flap {
-    border-left: calc($env-width / 2) solid transparent;
-    border-right: calc($env-width / 2) solid transparent;
-    border-bottom: calc(($env-height / 2) - 8px) solid transparent;
-    border-top: calc(($env-height / 2) + 8px) solid $color-flap;
+    border-left: ($env-width / 2) solid transparent;
+    border-right: ($env-width / 2) solid transparent;
+    border-bottom: ($env-height / 2) - 8px solid transparent;
+    border-top: ($env-height / 2) + 8px solid $color-flap;
     transform-origin: top;
     pointer-events: none;
 }
 
 .pocket {
-    border-left: calc($env-width / 2) solid $color-env;
-    border-right: calc($env-width / 2) solid $color-env;
-    border-bottom: calc($env-height / 2) solid $color-env2;
-    border-top: calc($env-height / 2) solid transparent;
+    border-left: ($env-width / 2) solid $color-env;
+    border-right: ($env-width / 2) solid $color-env;
+    border-bottom: ($env-height / 2) solid $color-env2;
+    border-top: ($env-height / 2) solid transparent;
     border-bottom-left-radius: $env-border-radius;
     border-bottom-right-radius: $env-border-radius;
 }
@@ -104,14 +104,14 @@ $heart-width : 50px;
 }
 
 .opened .letter {
-    transform: translateY(-(calc($env-height / 3)));
+    transform: translateY(-($env-height / 3));
     transition: transform .4s .6s ease, z-index .6s;
     z-index: 2;
 }
 
 .hearts {
     position: absolute;
-    top: calc($env-height / 2);
+    top: $env-height / 2;
     left: 0;
     right: 0;
     z-index: 2;
