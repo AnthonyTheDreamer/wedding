@@ -4,6 +4,7 @@ thumb: thumb.jpg
 home:
   - slide1.jpg
   - slide2.jpg
+  - slide3.jpg
 couple:
   groom: chure.jpg
   bride: codau.jpg
